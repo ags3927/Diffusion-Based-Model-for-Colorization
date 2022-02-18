@@ -18,9 +18,9 @@ class gray_color_data(Dataset):
         image_gray =  self.data_gray[idx]
         shape = (image_gray.shape[0],image_gray.shape[1], 3)
         image_gray = np.reshape(image_gray, newshape=(shape[0], shape[1]))
-        image_color = np.zeros(shape)
-        image_color[:,:,0] = image_gray
-        image_color[:,:,1:] = self.data_color[idx]
-        image_color = image_color.astype('uint8')
-        image_color = cv2.cvtColor(image_color,cv2.COLOR_LAB2RGB)
+        # image_color = np.zeros(shape)
+        # image_color[:,:,0] = image_gray
+        image_color = self.data_color[idx]
+        # image_color = image_color.astype('uint8')
+        # image_color = cv2.cvtColor(image_color,cv2.COLOR_LAB2RGB)
         return(ToTensor()(image_gray),ToTensor()(image_color))
