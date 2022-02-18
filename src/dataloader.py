@@ -10,8 +10,8 @@ class gray_color_data(Dataset):
         super().__init__()
         self.path_color = path_color
         self.path_gray = path_gray
-        self.data_color = np.load(path_color)
-        self.data_gray = np.load(path_gray)
+        self.data_color = np.load(path_color, allow_pickle=True)
+        self.data_gray = np.load(path_gray, allow_pickle=True)
     def __len__(self):
         return len(self.data_color)
     def __getitem__(self,idx):
