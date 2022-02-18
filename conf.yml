@@ -17,9 +17,9 @@ NUM_HEAD_UPSAMPLE : -1
 USE_SCALE_SHIFT_NORM : 'False'
 RESBLOCK_UPDOWN : 'False'
 USE_NEW_ATTENTION_ORDER : 'False'
-PATH_COLOR : 'color'
-PATH_GREY : 'grayscale'
-BATCH_SIZE : 16
+PATH_COLOR : '/content/npy_files/colored'
+PATH_GREY : '/content/npy_files/gray'
+BATCH_SIZE : 32
 BATCH_SIZE_VAL : 8
 ITERATION_MAX : 1e6
 LR : 1e-4
