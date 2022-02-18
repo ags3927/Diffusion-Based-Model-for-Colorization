@@ -21,8 +21,8 @@ PATH_COLOR : '/content/npy_files/colored'
 PATH_GREY : '/content/npy_files/gray'
 BATCH_SIZE : 32
 BATCH_SIZE_VAL : 8
-ITERATION_MAX : 1e6
-LR : 1e-4
+ITERATION_MAX : 1000000
+LR : 0.0001
 LOSS : 'L2'
 VALIDATION_EVERY : 1000
 EMA_EVERY : 100
