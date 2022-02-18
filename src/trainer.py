@@ -15,6 +15,8 @@ import numpy as np
 import tqdm
 import copy
 
+from functools import partial
+
 class Trainer():
     def __init__(self,config):
         self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
