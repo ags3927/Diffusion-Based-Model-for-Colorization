@@ -52,7 +52,7 @@ class Trainer():
         self.batch_size_val = config.BATCH_SIZE_VAL
         self.dataloader_train = DataLoader(dataset_train,batch_size=self.batch_size, shuffle=True)
         self.dataloader_validation = DataLoader(dataset_validation,batch_size=self.batch_size_val,shuffle=False)
-        self.iteration_max = config.ITERATION_MAX
+        self.iteration_max = float(config.ITERATION_MAX)
         self.EMA = EMA(0.9999)
         self.LR = float(config.LR)
         if config.LOSS == 'L1':
